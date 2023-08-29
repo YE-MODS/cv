@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    font-family: sans-serif;
+}
+.profile{
+    width: 40%;
+    float: right;
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-bottom: 5px solid grey;
+}
+.about{
+    margin-left: 15px;
+}
+.profile-info{
+    width: 60%;
+    height: 100vh;
+    float: left;
+    padding: 0 30px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.profile-info::-webkit-scrollbar{
+    width: 0;
+}
+.profile-info h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.social{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.social img{
+    width: 35px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 2s;
+}
+.social img:hover{
+    transform: rotate(320deg);
+}
+.profile-info h2{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.services{
+    display: inline-block;
+    width: 28%;
+    padding: 30px 10px;
+    margin: 2%;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(19, 23, 226, 0.18);
+}
+.services img{
+    width: 60%;
+    margin: 5px;
+}
+.services small{
+    padding-top: 15px;
+    display: block;
+}
+.skills-bar{
+    width: 600px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 2);
+}
+.skills-bar .bar{
+    margin: 20px 0;
+}
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+.skills-bar .bar .info span{
+font-size: 17px;
+font-weight: 500;
+}
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+   
+    transform-origin: left;
+   background: #f0f0f0;
+   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+                      0px 1px rgba(255, 255, 255, 0.8);
+   animation: animate 2s cubic-bezier(1,0,0,0.5,1)forwards;
+}
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: #1b1bd4;
+    position: absolute;
+    border-radius: 10px;
+   
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.Java span::after{
+    content: "60%";
+}
+.progress-line.css span::after{
+    content: "75%";
+}
+.progress-line.Python span::after{
+    content: "40%";
+}
+.progress-line.JScript span::after{
+    content: "50%";
+}
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+   background: #000;
+   padding: 1px 8px;
+   border-radius: 3px;
+
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.Java span{
+    width: 60%;
+}
+.progress-line.css span{
+    width: 75%;
+}
+.progress-line.Python span{
+    width: 40%;
+}
+.progress-line.JScript span{
+    width: 50%;
+}
+.form-pox{
+    margin-top: 30px;
+}
+.input-group input{
+    width: 45%;
+    border: 0;
+    outline: none !important;
+    padding: 10px;
+    background-color: rgba(226, 226, 226);
+    margin: 2%;
+    display: inline-block;
+}
+.text-area textarea{
+    width: 95%;
+    border: 0;
+    outline: none !important;
+    padding: 10px;
+    background-color: rgba(226, 226, 226);
+    margin: 2%;
+}
+.sub{
+    border: 0;
+    outline: none !important;
+    padding: 10px;
+    background-color: rgb(48, 139, 192);
+    margin: 2%;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.copy{
+    text-align: center;
+    margin-bottom: 30px;
+    color: grey;
+}
+@media only screen and (max-width:900px){
+    .profile-info{
+        width: 95%;
+    }
+    .profile{
+        width: 95%;
+    }
+    .profile img{
+        width: 90%;
+    }
+    .services{
+        width: 95%;
+        margin-bottom: 15px;
+    }
+    .skills-bar{
+        width: 95%;
+    }
+}
+
+
+
+
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #h3 {
+    color: white;
+  }
+  
+  #ring {
+    width: 190px;
+    height: 190px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  #ring:nth-child(1) {
+    border-bottom: 8px solid rgb(255, 141, 249);
+    animation: rotate1 2s linear infinite;
+  }
+  
+  @keyframes rotate1 {
+    from {
+      transform: rotateX(50deg) rotateZ(110deg);
+    }
+  
+    to {
+      transform: rotateX(50deg) rotateZ(470deg);
+    }
+  }
+  
+  #ring:nth-child(2) {
+    border-bottom: 8px solid rgb(255,65,106);
+    animation: rotate2 2s linear infinite;
+  }
+  
+  @keyframes rotate2 {
+    from {
+      transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+    }
+  
+    to {
+      transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+    }
+  }
+  
+  #ring:nth-child(3) {
+    border-bottom: 8px solid rgb(0,255,255);
+    animation: rotate3 2s linear infinite;
+  }
+  
+  @keyframes rotate3 {
+    from {
+      transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+    }
+  
+    to {
+      transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+    }
+  }
+  
+  #ring:nth-child(4) {
+    border-bottom: 8px solid rgb(252, 183, 55);
+    animation: rotate4 2s linear infinite;
+  }
+  
+  @keyframes rotate4 {
+    from {
+      transform: rotateX(70deg) rotateZ(270deg);
+    }
+  
+    to {
+      transform: rotateX(70deg) rotateZ(630deg);
+    }
+  }
